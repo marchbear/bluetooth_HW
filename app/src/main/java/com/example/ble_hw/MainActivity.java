@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         checkPermission();
         /**初始藍牙掃描及掃描開關之相關功能*/
         bluetoothScan();
-        /**取得欲連線之裝置後跳轉頁面*/
-        mAdapter.OnItemClick(itemClick);
+//         /**取得欲連線之裝置後跳轉頁面*/
+//         mAdapter.OnItemClick(itemClick);
 
     }
     /**權限相關認證*/
@@ -187,14 +187,14 @@ public class MainActivity extends AppCompatActivity {
         return gethex;
     }
 
-    /**取得欲連線之裝置後跳轉頁面*/
-    private RecyclerViewAdapter.OnItemClick itemClick = new RecyclerViewAdapter.OnItemClick() {
-        @Override
-        public void onItemClick(com.example.ble_hw.ScannedData selectedDevice) {
-            Intent intent = new Intent(MainActivity.this, com.example.ble_hw.DeviceControlActivity.class);
-            intent.putExtra(com.example.ble_hw.DeviceControlActivity.INTENT_KEY,selectedDevice);
-            startActivity(intent);
-        }
-    };
+//     /**取得欲連線之裝置後跳轉頁面*/
+//     private RecyclerViewAdapter.OnItemClick itemClick = new RecyclerViewAdapter.OnItemClick() {
+//         @Override
+//         public void onItemClick(com.example.ble_hw.ScannedData selectedDevice) {
+//             Intent intent = new Intent(MainActivity.this, com.example.ble_hw.DeviceControlActivity.class);
+//             intent.putExtra(com.example.ble_hw.DeviceControlActivity.INTENT_KEY,selectedDevice);
+//             startActivity(intent);
+//         }
+//     };
 
 }
